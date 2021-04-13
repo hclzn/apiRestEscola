@@ -37,6 +37,5 @@ export default class Foto extends Model {
 
   static associate(models) {
     this.belongsTo(models.Aluno, { foreignKey: 'aluno_id' });
-    // Caso queira referenciar no model aluno: this.hasMany(models.Foto, {foreignKey: 'alunos_id'});
   }
 }

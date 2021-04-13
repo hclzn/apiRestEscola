@@ -11,7 +11,6 @@ class UserController {
       });
     } catch (e) {
       return res.status(400).json({
-        // Objeto com chave errors!
         errors: e.errors.map((err) => err.message),
       });
     }
@@ -36,7 +35,6 @@ class UserController {
     try {
       const user = await User.findByPk(req.params.id);
       const { id, nome, email } = user;
-      // return res.json({ attributes: [user.nome, user.email] });
       return res.json({ id, nome, email });
     } catch (e) {
       return res.json(null);

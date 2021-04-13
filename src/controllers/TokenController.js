@@ -25,7 +25,6 @@ class TokenController {
       });
     }
 
-    // Retornar token para ele usar!
     const { id } = user;
     const token = jwt.sign({ id, email }, process.env.TOKEN_SECRET, {
       expiresIn: process.env.TOKEN_EXPIRATION,

@@ -1,6 +1,5 @@
 import bcryptjs from 'bcryptjs';
 import Sequelize, { Model } from 'sequelize';
-// Sequelize utiliza o validator!
 
 export default class User extends Model {
   static init(sequelize) {
@@ -32,7 +31,7 @@ export default class User extends Model {
         defaultValue: '',
       },
       password: {
-        type: Sequelize.VIRTUAL, // Não existe na base de dados!
+        type: Sequelize.VIRTUAL,
         defaultValue: '',
         validate: {
           len: {

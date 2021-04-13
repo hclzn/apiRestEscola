@@ -11,7 +11,6 @@ module.exports = {
     timestamps: true,
     underscored: true,
     underscoredAll: true,
-    // underscored: 'nomeAluno' -> 'nome_aluno'
     createdAt: 'created_at',
     updatedAt: 'updated_at',
   },
